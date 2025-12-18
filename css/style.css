@@ -1,0 +1,659 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Tambahkan padding-top pada section agar tidak tertutup Navbar saat melompat */
+section {
+    scroll-margin-top: 80px; /* Sesuaikan dengan tinggi Navbar kamu */
+}
+/* 2. Styling Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: absolute; /* Ini yang bikin dia menyatu dengan background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent; /* Hilangkan warna putihnya */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: white; /* Pastikan warna logo putih agar kontras */
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+/* Tulisan Logo */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Menu Navigasi Tengah */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+    opacity: 0.8; /* Sedikit transparan agar lebih estetik */
+}
+
+.nav-links a:hover {
+    opacity: 1; /* Terang saat disentuh */
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b5f8ed;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+/* Styling link di navbar */
+.navbar ul li a {
+    text-decoration: none;
+    color: #fcf8f8;
+    padding: 10px 20px;
+    border-radius: 25px;    /* Membuat efek tombol lonjong */
+    border: 1px solid transparent; /* Garis tepi yang tidak terlihat awalnya */
+    transition: all 0.3s ease;
+}
+
+/* Efek tombol saat disentuh (Hover) */
+.navbar ul li a:hover {
+    background-color: #e1edf03d; /* Warna tombol saat disentuh */
+    color: #274D60;            /* Warna teks jadi putih */
+    border: 1px solid #274D60;
+}
+
+/* 3. Styling Banner (Inspirasi Mockup Malam Hari) */
+.banner {
+    width: 100%;
+    height: 100vh; /* Memenuhi tinggi layar */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../img/banner02.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.header-content p {   
+    font-size: 1.2rem;
+}
+/* Styling Form Section */
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: hsla(175, 94%, 52%, 0.952);
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+profile-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.profile-container {
+    padding: 18px 10% 50px; /* Padding atas besar agar tidak tertutup navbar absolute */
+    text-align: center;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin-top: 0px;
+    text-align: left; /* Teks penjelasan rata kiri */
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Biar rapi di HP */
+@media (max-width: 768px) {
+    .profile-details {
+        flex-direction: column;
+    }
+}
+/* Container utama Profile */
+.profile-section {
+    padding: 10px 10%;
+    background-color: #6b9071;
+}
+
+.profile-container {
+    display: flex; /* Kunci agar teks & gambar bersebelahan */
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Pengaturan Teks */
+.profile-text {
+    flex: 1;
+    text-align: left;
+}
+
+
+.profile-text h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.profile-text ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.profile-text li {
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Pengaturan Gambar */
+.profile-image {
+    flex: 1;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 20px; /* Sudut melengkung seperti di gambar */
+    box-shadow: 0 10px 30px rgba(1, 82, 85, 0.322); /* Efek bayangan halus */
+}
+
+/* Biar rapi di HP (Gambar pindah ke bawah teks) */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-text {
+        text-align: center;
+    }
+    .profile-text ul {
+        display: inline-block;
+        text-align: left;
+    }
+}
+/* Bagian judul di tengah */
+.profile-header {
+    text-align: center; /* Membuat teks ke tengah */
+    margin-bottom: 45px; /* Memberi jarak ke konten di bawahnya */
+}
+
+.profile-header h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+
+/* Konten bawah tetap flexbox (berdampingan) */
+.profile-container {
+    display: flex;
+    align-items: flex-start; /* Agar teks & gambar mulai dari atas sejajar */
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Ganti kode .menu-toggle kamu dengan ini */
+.menu-toggle {
+    display: flex; /* Ubah dari 'none' ke 'flex' agar muncul di laptop */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255); /* Sesuaikan warna dengan logo 'Hiko' kamu */
+    border-radius: 2px;
+}
+
+/* Jika kamu ingin menu teksnya (Home, Profile, dll) hilang dan hanya muncul garis tiga */
+.nav-links {
+    display: none; 
+}
+/* Pastikan menu nav-links muncul saat class 'active' ada */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Sesuaikan dengan tinggi navbar kamu */
+    right: 5%;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+/* Bagian Form (Sisi Kiri) */
+.form-container {
+    flex: 1; /* Mengambil ruang yang seimbang */
+    text-align: left; /* Rata kiri */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%; /* Lebar penuh di dalam kolom kiri saja */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    box-sizing: border-box; /* Biar padding gak nambah lebar */
+}
+
+/* Bagian Output (Sisi Kanan) */
+.current-data {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #333; /* Memberi pembatas visual */
+    border-radius: 8px;
+    min-height: 300px;
+    text-align: left;
+}
+
+.current-data h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Responsif: Kalau buka di HP, jadi tumpuk atas-bawah lagi */
+@media screen and (max-width: 768px) {
+    /* Container pembungkus utama */
+/* Kita pakai selector yang lebih spesifik */
+}
+
+/* Supaya kotak form dan data tidak transparan dan mudah dibaca */
+.form-container, .current-data {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1); /* Putih transparan tipis */
+    backdrop-filter: blur(10px); /* Efek kaca buram (Glassmorphism) */
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Pastikan label input tetap terbaca jelas */
+.form-group label {
+    color: white;
+}
+
+/* Mengubah warna teks di dalam kotak Current Data agar kontras */
+.current-data h3, .current-data p {
+    color: white;
+}
+
+/* Kotak Form (Kiri) */
+.form-container {
+    flex: 1;
+    max-width: 500px; /* Batasi lebar biar gak terlalu molor */
+    background: white;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Kasih bayangan biar keren */
+}
+
+/* Kotak Hasil (Kanan) */
+.current-data {
+    flex: 1;
+    max-width: 400px; /* Kotak hasil biasanya lebih kecil sedikit */
+    background-color: #f4f4f4;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+/* Menempatkan judul Message Us di tengah */
+.form-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px; /* Memberi jarak sedikit ke bawah agar tidak terlalu rapat dengan input pertama */
+    font-size: 24px;
+    width: 100%; /* Memastikan judul mengambil ruang penuh untuk bisa di-center */
+}
+
+/* Jika kamu ingin judul "Current Data" juga di tengah agar simetris */
+.current-data h3 {
+    text-align: center;
+    margin-top: 10;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #32edfa6b; /* Opsional: garis bawah biar makin tegas */
+    padding-bottom: 10px;
+}
+.message-section {
+    display: flex !important;
+    justify-content: center;
+    gap: 20px;
+    padding: 100px 10% !important;
+
+    /* PAKAI 3 BARIS INI SAJA UNTUK BACKGROUND */
+    background-image: linear-gradient(rgba(212, 212, 212, 0), rgba(212, 212, 212, 0)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    
+    min-height: 500px;
+}
+.form-container, .current-data {
+    /* Ubah background kotak jadi transparan (0.5) */
+    background: rgba(255, 255, 255, 0.521) !important; 
+    padding: 20px;
+    border-radius: 15px;
+}  
+/* Mengubah semua teks di section Message menjadi putih */
+.message-section h2, 
+.message-section h3, 
+.message-section label, 
+.message-section p,
+.message-section span {
+    color: #000000 !important; /* Warna hitam solid */
+}
+
+/* Khusus untuk teks di dalam Current Data agar lebih terang */
+.current-data b {
+    color: #000000 !important;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* Mencegah halaman geser kiri-kanan */
+}
+.about-container {
+    padding: 0px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9d8; /* Latar belakang abu-abu sangat muda */
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.808);
+    width: 90%;
+    max-width: 800px; /* KUNCI: Mengatur lebar kotak agar tidak kebesaran */
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Bayangan halus */
+    gap: 40px;
+}
+
+/* Lingkaran Foto */
+.about-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #0A7075; 
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Bagian Teks */
+.about-text {
+    text-align: left;
+}
+/* Memberikan jarak antar baris kalimat agar tidak rapat */
+.about-text p {
+    line-height: 1.6; 
+    margin-bottom: 20px; /* Jarak bawah paragraf */
+    color: #444;
+}
+
+/* Mengatur jarak judul Visi dan Misi */
+.about-text h3 {
+    margin-top: 25px;    /* Jarak dari teks di atasnya */
+    margin-bottom: 10px; /* Jarak ke teks/list di bawahnya */
+    font-size: 20px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Memberikan jarak antar poin di Misi */
+.about-text ul {
+    margin-bottom: 30px; /* Jarak sebelum tombol Book Now */
+    padding-left: 1px;  /* Jarak indentasi list */
+}
+
+.about-text li {
+    margin-bottom: 1px; /* Jarak antar poin list */
+    line-height: 1.6;
+}
+
+/* Memberikan jarak pada tombol agar tidak menempel ke list */
+.btn-book {
+    margin-top: 15px;
+    display: inline-block; /* Agar margin bekerja dengan baik */
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #666;
+    margin-bottom: 15px;
+    font-family: 'Serif', Georgia, serif; /* Gaya font elegan */
+}
+
+.about-text p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* Tombol Book Now */
+.btn-book {
+    background-color: #0C969C;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    float: right; /* Menaruh tombol di kanan bawah seperti gambar */
+    transition: 0.3s;
+}
+
+.btn-book:hover {
+    background-color: #0A7075;
+}
+.contact-container {
+    padding: 80px 10%;
+    background-color: #f1e3e3ec;
+    text-align: center;
+}
+
+.contact-header h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.contact-header p {
+    color: #777;
+    margin-bottom: 50px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    text-align: left;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.info-item .icon {
+    font-size: 24px;
+    margin-right: 20px;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.info-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.info-item p {
+    color: #666;
+    margin: 0;
+}
+
+/* Kotak CTA di sebelah kanan */
+.contact-cta {
+    flex: 0.8;
+    background: #2c3e50;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-cta h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.btn-whatsapp {
+    margin-top: 20px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999; /* Memastikan navbar selalu di paling depan */
+}
+
+/* Tambahkan ini agar saat loncat, judulnya tidak tertutup navbar */
+section {
+    scroll-margin-top: 80px; 
+}
+/* Pastikan semua section punya lebar yang benar */
+.about-container, .package-section, .message-section, .contact-container {
+    width: 100%;
+    display: block; /* Mengembalikan posisi yang mungkin hilang */
+    clear: both;
+}
+
+/* Scroll halus agar navigasi enak dilihat */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Jarak aman agar judul tidak tertutup Navbar saat diklik */
+section[id] {
+    scroll-margin-top: 100px;
+}
+.about-container {
+    width: 100%;
+    display: flex; /* KUNCI: Membuat isi di dalamnya bisa diatur posisinya */
+    justify-content: center; /* KUNCI: Menarik semua konten ke tengah secara horizontal */
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.about-card {
+    width: 90%;
+    max-width: 1000px; /* Membatasi lebar agar tidak terlalu melar */
+    display: flex; /* Membuat foto dan teks berdampingan */
+    align-items: center; /* Membuat foto dan teks rata tengah secara vertikal */
+    gap: 40px; /* Jarak antara foto dan teks */
+    text-align: left; /* Teks di dalam kotak tetap rata kiri agar rapi */
+}
+.section-spacer {
+    width: 100%;
+    height: 100px; /* Kamu bisa tambah tingginya sedikit agar gambar terlihat */
+    background-image:linear-gradient(rgba(155, 151, 151, 0.233), rgba(155, 151, 212, 0.5)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop') !important;
+    background-size: cover; /* Agar gambar menutupi seluruh area persegi */
+    background-position: center; /* Agar gambar diambil bagian tengahnya */
+    background-attachment: fixed; /* EFEK PARALLAX: Gambar akan diam saat di-scroll (keren!) */
+    border-top: 2px solid #ffffff00; /* Opsional: garis pembatas emas */
+    border-bottom: 2px solid #ffffff00;
+}
