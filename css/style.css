@@ -676,9 +676,9 @@ section[id] {
 
 /* Mengatur Tulisan di samping Logo */
 .logo-text {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
-    color: #000000;
+    color: #0000008e;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
