@@ -657,3 +657,32 @@ section[id] {
     border-top: 2px solid #ffffff00; /* Opsional: garis pembatas emas */
     border-bottom: 2px solid #ffffff00;
 }
+/* Container untuk membungkus gambar dan tulisan */
+.logo-container {
+    display: flex;
+    align-items: center; /* Supaya gambar dan tulisan sejajar tengah secara vertikal */
+    gap: 15px; /* Jarak antara lingkaran gambar dan tulisan */
+}
+
+/* Mengatur Gambar menjadi Lingkaran */
+.logo-img {
+    width: 55px; /* Ukuran lebar */
+    height: 55px; /* Tinggi harus sama dengan lebar agar bulat sempurna */
+    border-radius: 50%; /* Kunci untuk membuat bentuk lingkaran */
+    object-fit: cover; /* Agar gambar tidak terlihat gepeng */
+    border: 2px solid #659d9e; /* Garis tepi warna emas agar elegan */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Efek bayangan tipis */
+}
+
+/* Mengatur Tulisan di samping Logo */
+.logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    color: #659d9e;
+}
